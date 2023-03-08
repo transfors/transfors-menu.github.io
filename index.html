@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- loguearse en fontawesome.com presionar sobre el kit 
+    y copiar el link de configuración en el head para .css o .js 
+    y luego el del icono en el body -->
+    <!-- agregue Access-Control-Allow-Origin: a la línea siguiente para
+    solucionar el problema GET https://kit.fontawesome.com/584e0fe159.css
+    CORS Missing Allow Origin que aparece al inspeccionar la página
+    en internet (Razón: falta el encabezado CORS 'Access-Control-Allow-Origin') 
+    Por ejemplo, para permitir a un sitio como https://kit.fontawesome.com 
+    acceder al recurso usando CORS, la cabecera deberia ser: 
+    Access-Control-Allow-Origin: https://amazing.site -->
+    <link rel="stylesheet" href="Access-Control-Allow-Origin: https://kit.fontawesome.com/584e0fe159.css" crossorigin="anonymous">
+    <title>Menu de Navegación Responsive</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>transfor</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <!-- agrego el ícono de fontawesome -->
+        <div class="hide">
+            <i class="fa-solid fa-bars"></i> Menu
+        </div>
+    </nav>
+
+    <!-- para usar jQuery bajamos el archivo Download the compressed, 
+    production jQuery 3.6.3 de jQuery botón derecho guardar como 
+    en la carpeta del proyecto y agregamos la línea siguiente: -->
+    <script src="./jquery-3.6.3.js"></script>
+    <!-- luego escribimos el código JavaScript 
+    para que se despliegue y cierre el menu-->
+    <script>
+        $(".hide").on('click', function () {
+            $("nav ul").toggle('slow');
+        })
+    </script>
+
+</body>
+
+</html>

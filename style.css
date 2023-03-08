@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* para que ocupe el padding y el borde */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic', sans-serif;
+}
+
+/* le damos estilos a la cabecera transfor */
+header {
+    width: 100%;
+    padding: 40px;
+    /* color de la tipografía de transfor */
+    color: white;
+    /* alinear texto en pantalla pc */
+    text-align: center;
+    /* color de fondo donde dice transfor */
+    background: #112d4e;
+}
+
+/* le damos estilo a los enlaces del menu */
+nav ul {
+    list-style: none;
+    background: #164884;
+    /* para que el menu quede centrado */
+    text-align: center;
+}
+
+nav ul li {
+    /* por defecto las listas son elementos en bloque
+    lo vamos a poner en línea pero en bloque */
+    display: inline-block;
+    padding: 10px;
+    /*para darle un efecto a la animación del menú */
+    border-radius: 10px;
+    transition: all ease-in-out 250ms;
+}
+
+ul li a {
+    /* color palabras del menú */
+    color: white;
+    /* para borrar el subrrayado */
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    /* le damos un color para animar las 
+    palabras del menu cuando me posiciono 
+    con el mouse */
+    background: #112d4e;
+}
+
+.hide {
+    font-size: 22px;
+    padding: 16px;
+    background-color: #50657d;
+    color: white;
+    cursor: pointer;
+    /* para que el menu quede oculto */
+    display: none;
+ 
+}
+
+
+/* para que el menú ocupe el 100% */
+/* usamos medias quary */
+
+@media (max-width: 768px) {
+    ul li {
+        width: 100%;
+        padding: 16px;
+        /* menu en movil alineado a la izquierda */
+        text-align: left;
+    }
+    nav ul {
+        /* para que se oculte el menu en movil */
+        display: none;
+    }
+    .hide {
+        /* para que aparezca el menu desplegable solo */
+        display: block;
+    }
+}
